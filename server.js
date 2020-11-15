@@ -19,9 +19,6 @@ app.use(express.json());
 //middleware for public file pathing
 app.use(express.static(path.join(__dirname, "/public")));
 
-//connect to mongoose db
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", { useNewUrlParser: true });
-
 //require routes
 require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
