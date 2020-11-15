@@ -1,5 +1,7 @@
+//require path to access files using absolute pathing
 const path = require("path");
 
+//exporting html routes
 module.exports = function (app) {
     app.get("/", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/index.html"));
