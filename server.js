@@ -3,6 +3,8 @@ const path = require("path");
 
 //route logging package
 const logger = require("morgan");
+//mongoose pacakge
+const mongoose = require("mongoose");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -17,9 +19,12 @@ app.use(express.json());
 //middleware for public file pathing
 app.use(express.static(path.join(__dirname, "/public")));
 
+//connect to mongoose db
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", { useNewUrlParser: true });
+
 //require routes
 require("./routes/htmlRoutes.js")(app);
-require(".routes/apiRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
 
 app.listen(PORT, () => {
     console.log("Server listening on PORT " + PORT);
