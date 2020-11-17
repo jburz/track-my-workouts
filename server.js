@@ -6,6 +6,12 @@ const logger = require("morgan");
 //mongoose pacakge
 const mongoose = require("mongoose");
 
+//initialize db connection
+mongoose.connect("mongodb://localhost/workout", {
+    useNewUrlParser: true,
+    useFindAndModify: false
+});
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
