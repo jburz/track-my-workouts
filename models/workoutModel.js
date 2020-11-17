@@ -10,14 +10,39 @@ const WorkoutSchema = new Schema({
     },
     exercises: [
         {
-            type: String,
-            name: String,
-            duration: Number,
-            weight: Number,
-            reps: Number,
-            sets: Number
+            type: {
+                type: String,
+            },
+            name: {
+                type: String,
+                trim: true
+            },
+            duration: {
+                type: Number,
+                default: 10
+            },
+            weight: {
+                type: Number,
+                default: 200
+            },
+            reps: {
+                type: Number,
+                default: 10
+            },
+            sets: {
+                type: Number,
+                default: 4
+            },
+            distance: {
+                type: Number,
+                default: 5
+            }
         }
-    ]
+    ],
+    totalDuration: {
+        type: Number,
+        default: 10
+    }
 });
 
 //initialize workout model
