@@ -28,8 +28,13 @@ module.exports = function (app) {
     });
 
     app.post("/api/workouts", (req, res) => {
-        console.log('hit /api/workouts post request');
-        console.log(req.body);
+        db.Workout.create(req.body)
+            .then(newWorkout => {
+                res.json(newWorkout);
+            })
+            .catch(err => {
+                res.json(err);
+            });
     });
 
     app.get("/api/workouts/range", (req, res) => {
