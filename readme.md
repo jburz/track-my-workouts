@@ -13,6 +13,12 @@ This app allows you to create and modify workout routines.  Add resistance or ca
   * [Questions](#Questions)
 <br>
 
+## Screenshots
+![last_workout](./public/imgs/lastWorkout.png)
+![successful_toast](./public/imgs/successfulToast.png)
+![dashboard](./public/imgs/dashboard.png)
+<br>
+
 ## Installation
 You will need to have node.js installed on your local machine.  Navigate to the repository on github, then clone the repository down to your local computer using an https or ssh key.  Using a terminal, once you are within the root folder, run npm install to install any dependecies.
 <br>
