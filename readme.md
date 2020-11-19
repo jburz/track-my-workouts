@@ -16,7 +16,7 @@ This app allows you to create and modify workout routines.  Add resistance or ca
 ## Screenshots
 ![last_workout](./public/imgs/lastWorkout.png)
 ![successful_toast](./public/imgs/successfulToast.png)
-![dashboard](./public/imgs/dashboard.png)
+![dashboard](./public/imgs/Dashboard.png)
 <br>
 
 ## Installation
