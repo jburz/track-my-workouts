@@ -31,5 +31,4 @@ require("./routes/apiRoutes.js")(app);
 
 app.listen(PORT, () => {
     console.log("Server listening on PORT " + PORT);
-    console.log(__dirname);
 });
