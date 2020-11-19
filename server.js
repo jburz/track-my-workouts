@@ -7,7 +7,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 
 //initialize db connection
-mongoose.connect(process.env.MONGOBD_URI || "mongodb://localhost/workout", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useNewUrlParser: true,
     useFindAndModify: false
 });
